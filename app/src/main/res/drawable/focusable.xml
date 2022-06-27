@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/cardview_shadow_start_color" />
+    <item android:state_focused="true" android:drawable="@color/colorPalmCornor" />
+    <item android:drawable="@color/whitepure" />
+</selector>-->
+<ripple android:color="@color/cardview_shadow_start_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/whitepure" />
+    <item
+        android:id="@android:id/mask"
+        android:drawable="@color/whitepure" />
+</ripple>

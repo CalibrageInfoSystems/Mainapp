@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oilpalm3f.mainapp.transportservice.TransportActivity">
+
+    <include
+        android:id="@+id/toolbarlayout"
+        layout="@layout/toolbar_common">
+
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:padding="10dp">
+
+    <Button
+        android:id="@+id/farmerBtn"
+        style="@style/moduleBtnStyle"
+        android:onClick="nextScreen"
+        android:text="Transport service questioner Farmer" />
+
+    <Button
+        android:id="@+id/vendorBtn"
+        style="@style/moduleBtnStyle"
+        android:onClick="nextScreen"
+        android:text="Transport service questioner Vendor" />
+
+    </LinearLayout>
+</LinearLayout>

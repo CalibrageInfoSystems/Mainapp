@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oilpalm3f.mainapp.cropmaintenance.WhiteFlyFragment"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusableInTouchMode="false"
+    android:background="@color/white">
+    <include
+        android:id="@+id/toolbarlayout"
+        layout="@layout/toolbar_common">
+
+    </include>
+
+    <Button
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/whiteflylastvisitdataBtn"
+        style="@style/dialogBasicBtnStyle"
+        android:text="@string/last_visit_data"
+        android:padding="4dp"
+        android:layout_gravity="end"/>
+
+    <Button
+        android:id="@+id/secnodpreviousfy"
+        style="@style/moduleBtnStyle"
+        android:layout_margin="10dp"
+        android:padding="10dp" />
+    <Button
+        android:id="@+id/previousfy"
+        style="@style/moduleBtnStyle"
+        android:layout_margin="10dp"
+        android:padding="10dp" />
+    <Button
+        android:id="@+id/currentfy"
+        style="@style/moduleBtnStyle"
+        android:layout_margin="10dp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        style="@style/basicBtnStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/save" />
+
+
+
+</LinearLayout>

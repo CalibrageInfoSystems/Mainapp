@@ -1,0 +1,527 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.oilpalm3f.mainapp.cropmaintenance.WhiteFieldFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="450dp"
+        android:minHeight="500dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/finyear"
+                android:textAlignment="center"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/percentTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/measuresusedEt"
+                android:text="What is the White Fly Spread Extent (% Trees Infected)" />
+
+            <Spinner
+                android:id="@+id/spinner_percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/percentTv" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rL0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/intensityTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_percent"
+                android:text="What is the White Fly Intensity (Within 1 tree)" />
+
+            <Spinner
+                android:id="@+id/spinner_intensity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/sootyTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_intensity"
+                android:text="Sooty Mould observed (Within above spread and intensity)" />
+
+            <Spinner
+                android:id="@+id/spinner_sooty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sootyTv" />
+
+            <TextView
+                android:id="@+id/infestationTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_sooty"
+                android:layout_marginBottom="12dp"
+                android:text="Month of Infestation"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/spinner_infestation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/infestationTv"
+                android:text="--Month Of Infestation--" />
+
+
+
+
+
+            <LinearLayout
+
+                android:id="@+id/sprayingDoneLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl2"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/sprayingDoneRg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sprayingTV"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="Was Isaria Fumosorosea spraying done?" />
+
+                    <RadioButton
+                        android:id="@+id/sprayingDoneYesRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/colorGray" />
+
+                    <RadioButton
+                        android:id="@+id/sprayingDoneNoRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="No"
+                        android:textColor="@color/colorGray" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprayingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+
+                    android:id="@+id/sprayingdoneTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Month of Spraying ?" />
+
+                <Spinner
+                    android:id="@+id/spinner_sprayingDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sprayingdoneTv" />
+
+
+
+
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:id="@+id/sprayingsucess"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/sprayingDoneCBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/spinner_sprayingDone"-->
+<!--                android:text="Success of Spraying ?"-->
+<!--                android:textColor="@color/colorGray" />-->
+<!--                <EditText-->
+<!--                    android:id="@+id/sprayingDoneCBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/spinner_sprayingDone"-->
+<!--                    android:text="Success of Spraying ?"-->
+<!--                    android:textColor="@color/colorGray" />-->
+<!--        </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/sprayingsuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+
+                    android:id="@+id/sprayingsucessTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Success of Spraying ?" />
+
+                <Spinner
+                    android:id="@+id/spinner_sprayingsuccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sprayingsucessTvTv" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/controlDoneLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/controll2"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/controlDoneRg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/controlTV"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="Other Spraying done?" />
+
+                    <RadioButton
+                        android:id="@+id/controlDoneYesRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/colorGray" />
+
+                    <RadioButton
+                        android:id="@+id/controlDoneNoRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="No"
+                        android:textColor="@color/colorGray" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/controlLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/measuresusedTv"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name of the Spraying?" />
+
+                <EditText
+                    android:id="@+id/measuresusedEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/measuresusedTv"
+                    android:inputType="text" />
+
+
+                <TextView
+
+                    android:id="@+id/controldoneTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Month of Spraying?" />
+
+                <Spinner
+                    android:id="@+id/spinner_controlDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/controldoneTv" />
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/controlDoneCBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/spinner_controlDone"-->
+<!--                    android:text="Success of Control Measure ?"-->
+<!--                    android:textColor="@color/colorGray" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/controlsucess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+
+
+                <TextView
+
+                    android:id="@+id/controlsuccessTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Success of Other Spraying ?" />
+
+                <Spinner
+                    android:id="@+id/spinner_controlsuccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/controldoneTv" />
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:id="@+id/boosterFertilizerLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl3"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/boostfertiligerRg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fertilizerTv"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Booster Fertiliser Given? " />
+
+                    <RadioButton
+                        android:id="@+id/fertilizerYesRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/colorGray" />
+
+                    <RadioButton
+                        android:id="@+id/fertilizerNoRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="No"
+                        android:textColor="@color/colorGray" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fertiLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/selectFertilizerTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Select fertilizer"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/_urea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="Urea:" />
+
+                    <EditText
+                        android:id="@+id/urea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/_mop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="MOP:" />
+
+                    <EditText
+                        android:id="@+id/mop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/_ssp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="SSP:" />
+
+                    <EditText
+                        android:id="@+id/ssp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/_mgs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="MGS05:" />
+
+                    <EditText
+                        android:id="@+id/mgs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/_boron"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="Boron:" />
+
+                    <EditText
+                        android:id="@+id/boron"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/spinner_selectFertilizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="--Fertilizer--"
+                    android:textSize="22sp" />
+
+                <!--                <Spinner-->
+                <!--                    android:id="@+id/spinner_selectFertilizer"-->
+                <!--                    android:layout_below="@+id/selectFertilizerTv"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"/>-->
+
+
+                <TextView
+                    android:id="@+id/quantityTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectFertilizerTv"
+                    android:text="Quantity" />
+
+                <EditText
+                    android:id="@+id/spinner_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/quantityTv"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveBtn"
+            style="@style/basicBtnStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+</ScrollView>

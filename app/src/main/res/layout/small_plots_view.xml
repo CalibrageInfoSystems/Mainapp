@@ -1,0 +1,151 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/focusable"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/RLplotdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@+id/chkSelected">
+
+
+            <TextView
+                android:id="@+id/tvplotidvalue"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:padding="4dp"
+                android:text="PlotId"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tvplotvillagevalue"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot Village"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tvplotlandmarkvalue"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot LandMark"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tvplotareavalue"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot Area"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tvplotsurveyvalue"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot survey number"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tvplotDOP"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot DOP"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+
+            <TextView
+                android:id="@+id/vistCount"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot VistCount"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/lastest_vistDate"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Plot LatestDate"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chkSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/arrow_point_to_right"
+            android:textColor="@color/action_color"
+            android:textSize="11sp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+        <ImageButton
+            android:id="@+id/ivb_plot_location_cropcollection"
+            android:layout_marginRight="-15dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/cardview_light_background"
+            android:scaleType="fitCenter"
+
+            android:src="@mipmap/geo_tag" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

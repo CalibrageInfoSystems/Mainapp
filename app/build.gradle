@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+//    flavorDimensions "default"
+
+    defaultConfig {
+        applicationId "com.oilpalm3f.cropapp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 146
+        versionName "1.3.146"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        useLibrary 'org.apache.http.legacy'
+    }
+
+//    productFlavors {
+//        publicApp {
+//            applicationId "com.oilpalm3f.cropapp.test"
+//            minSdkVersion 21
+//            targetSdkVersion 28
+//            versionCode 143
+//            versionName "1.3.143"
+//            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//            multiDexEnabled true
+//            useLibrary 'org.apache.http.legacy'
+//        }
+//        internal {
+//            applicationId "com.oilpalm3f.cropapp.test2"
+//            minSdkVersion 21
+//            targetSdkVersion 28
+//            versionCode 143
+//            versionName "1.3.143"
+//            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//            multiDexEnabled true
+//            useLibrary 'org.apache.http.legacy'
+//        }
+//    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        maven { url "https://jitpack.io" }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../app/keys/3f_main_crop_release.jks')
+            storePassword '3f@Crop'
+            keyAlias '3falias'
+            keyPassword '3f@CropA'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'AndroidManifest.xml'
+        exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
+
+    }
+
+}
+
+
+dependencies {
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    implementation files('libs/AnalogicsVersa3TBTPrinterAPI.jar')
+    implementation files('libs/AndroidPrinterSDK3.0.jar')
+    fileTree(dir: 'libs', include: '**/*.aar')
+            .each { File file ->
+        dependencies.add("implementation", [name: file.name.lastIndexOf('.').with {
+            it != -1 ? file.name[0..<it] : file.name
+        }, ext                                  : 'aar'])
+    }
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.3@aar') {
+        transitive = true;
+    }
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'org.codehaus.jackson:jackson-mapper-asl:1.9.12'
+    implementation 'com.googlecode.android-query:android-query:0.25.9'
+    implementation 'org.apache.commons:commons-lang3:3.5'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'com.github.GrenderG:Toasty:1.3.0'
+
+    implementation 'gr.escsoft.michaelprimez.searchablespinner:SearchableSpinner:1.0.8'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.6.1'
+    implementation 'com.melnykov:floatingactionbutton:1.1.0'
+    implementation 'net.danlew:android.joda:2.9.9.4'
+    implementation 'com.github.pavlospt:circleview:1.3'
+
+    implementation 'com.github.cdflynn:checkview:v1.1'
+
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+
+    implementation 'com.github.dewinjm:monthyear-picker:1.0.2'
+
+    //signatureview added on 22nd Nov 2021 by Calibrage Developer
+
+    implementation 'com.kyanogen.signatureview:signature-view:1.0'
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'com.tom-roush:pdfbox-android:2.0.8.0'
+    implementation group: 'org.apache', name: 'pdfbox-android', version: '1.8.9.0'
+
+}

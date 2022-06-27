@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/cp_card_view"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true"
+    app:ignore="NamespaceTypo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/mainlyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Weed Management And Other History"
+            app:titleTextColor="@android:color/white"
+            android:id="@+id/titleToolbar"
+            android:background="@android:color/holo_green_dark"/>
+
+>
+      <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp"
+          android:weightSum="1">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:text="Basin Health"
+                    android:gravity="center_vertical"/>
+
+          <TextView
+              style="@style/header_h1_text_title"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:layout_weight="0.1"
+              android:text=" :  "/>
+
+          <TextView
+              android:id="@+id/weedbasinhealth"
+              style="@style/header_h1_text_title"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.6"
+              android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:text="Weed"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedtype"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                >
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Pruning"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedpruning"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Weevils"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedweevils"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Inflorescence"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedInflorescence"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Mulching Seen"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedmulchingseen"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:lines="2"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/weedingproperlydonell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:text="Weeding Properly Done"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedproperlydone"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weedingmethodll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:text="Weeding Method"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedWeedingMethod"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                android:id="@+id/weednameofthechemicalusedLL"
+                android:visibility="gone">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Name of Chemical Used"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedChemicalUsed"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/frequencyofappll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Frequency of application/yr"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedapplicationyr"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/pruningfrequencyll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Frequency of pruning"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text=" :  "/>
+
+                <TextView
+                    android:id="@+id/weedfrequencyofpruning"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+    <TextView
+        android:id="@+id/norecord_tv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="No Records Found"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+</android.support.v7.widget.CardView>

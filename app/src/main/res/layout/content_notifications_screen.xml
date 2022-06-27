@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oilpalm3f.mainapp.ui.NotificationsScreen"
+    tools:showIn="@layout/activity_notifications_screen"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/refreshBtn"
+        style="@style/basicBtnStyle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="15dp"
+        android:text="Refresh" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notificationRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

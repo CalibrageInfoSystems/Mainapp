@@ -1,0 +1,280 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/datelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/Last_Visited_Date"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/RLplotdetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/datelayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/code"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvplotidvalue"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/Plot_Id"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/pro_Village"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvplotvillagevalue"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.6"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Plot Village"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/pro_Mandal"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvplotmandal"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.6"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Plot LandMark"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/Crop"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvplotcrop"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.6"
+                    android:gravity="center_vertical"
+                    android:text="Plot Crop"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.4"
+                    android:singleLine="true"
+                    android:text="@string/Area"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvplotareavalue"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.6"
+                    android:singleLine="true"
+                    android:text="Plot Area"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.4"
+                    android:singleLine="true"
+                    android:text="@string/Income"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvplotincome"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.6"
+                    android:singleLine="true"
+                    android:text="Plot Income"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.4"
+                    android:singleLine="true"
+                    android:text="@string/Score"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/score"
+                    style="@style/header_h1_text_title_list_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.6"
+                    android:singleLine="true"
+                    android:text="Plot Score"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvplotlastUpdatedDate"
+                style="@style/header_h1_text_title_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="Plot Date"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ivb_plot_location"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignParentEnd="true"
+            android:background="@color/cardview_light_background"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/geo_tag" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

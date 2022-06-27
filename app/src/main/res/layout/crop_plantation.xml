@@ -1,0 +1,286 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/surface_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_toLeftOf="@+id/arrow_right"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:id="@+id/delete"
+                    android:padding="5dp"
+                    android:src="@mipmap/garbage"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/datePlantationLL"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/dateplanting"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Date_of_Planting"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/dateplanting_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/areaallocated"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Area_Allocated"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/areaallocated_text"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/saplingnursery"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Sapling_Nursery"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/saplingnursery_text"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/saplingsource"                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Sapling_Source"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/saplingsource_text"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/saplingvendor"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sapling_vendor"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/saplingvendor_text"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/variety"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Variety_cross"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/variety_text"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/counttrees"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Count_of_TreesSaplings_Planted"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/text_dark_gray" />
+
+                    <TextView
+                        android:id="@+id/counttrees_text"
+                        style="@style/header_h1_text_title_list_item"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_dark_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

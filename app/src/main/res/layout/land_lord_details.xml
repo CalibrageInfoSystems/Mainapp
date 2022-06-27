@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:visibility="visible"
+    android:id="@+id/landlord_details_screen">
+
+    <LinearLayout
+        android:id="@+id/landlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/header_h1_text_title_multi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Landlord/ GPA Holder Name *" />
+
+        <EditText
+            android:id="@+id/landNameEdt"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:digits="@string/digits"
+            android:inputType="textCapSentences|textNoSuggestions|textVisiblePassword">
+
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/landNamelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/header_h1_text_title_multi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Landlord Contact Number *" />
+
+        <EditText
+            android:id="@+id/landContactEdt"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="10">
+
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lease_date_from_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/header_h1_text_title_multi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/lease_date_from" />
+
+        <EditText
+            android:id="@+id/lease_datefrom_edt"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:editable="false"
+            android:focusable="false">
+
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lease_date_to_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/header_h1_text_title_multi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/lease_date_to" />
+
+        <EditText
+            android:id="@+id/lease_dateto_edt"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:editable="false"
+            android:focusable="false">
+
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bankdetailstitle_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/header_h1_text_title_with_background"
+            android:text="LandLord Bank Account Details" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lanlordaccholdername_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/account_holder_name" />
+
+        <EditText
+            android:id="@+id/landlord_account_holder_name"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:digits="@string/digits"
+            android:inputType="textCapSentences|textNoSuggestions|textVisiblePassword"
+            android:maxLength="50"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/landlordaccnum_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/account_number" />
+
+        <EditText
+            android:id="@+id/landlord_account_number"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="20" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/banknamedropdown_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/bankname" />
+
+        <Spinner
+            android:id="@+id/bankCodeSpin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/branchnamedropdown_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/branch_name" />
+
+        <Spinner
+            android:id="@+id/branchSpin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/landlordifsccode_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/ifsc_code" />
+
+        <EditText
+            android:id="@+id/landlord_ifsc_code"
+            style="@style/editTxt_normal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:digits="@string/aplhanumeric_type1"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:maxLength="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/landlordidproof_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/header_h1_text_title_with_background"
+            android:text="@string/id_proofs" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/idProofsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/addRowlandLordImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/plus"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,1094 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+
+                android:id="@+id/llrecom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRecommnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:drawableRight="@mipmap/arrow_ic"
+                    android:text="Recommendation" />
+
+
+            </RelativeLayout>
+            />
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/actionBarSize"
+        android:layout_margin="@dimen/common_margin">
+
+        <LinearLayout
+            android:id="@+id/fertizerParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right">
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/complaintsBtn"
+                    style="@style/dialogBasicBtnStyle"
+                    android:text="@string/Add_Complaint"
+                    android:padding="14dp"
+                    android:layout_marginRight="15dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/historyBtn"
+                    style="@style/dialogBasicBtnStyle"
+                    android:text="@string/last_visit_data"
+                    android:padding="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <TextView-->
+<!--                    style="@style/header_h1_text_title"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/fer_Frequency_of_Application" />-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/frequencyOfApplicationSpin"-->
+<!--                    style="@style/spinner_bg"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1" />-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Fertilizer Applied?" />
+                <TextView
+                    android:id="@+id/currentqtr"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:text="Current Qtr"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/prvsqtr"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:text="Prev. Qtr"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Fertilizer Applied?" />
+                <Spinner
+                    android:id="@+id/FertilizerApplied"
+                    style="@style/spinner_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Spinner
+                    android:id="@+id/pFertilizerApplied"
+                    style="@style/spinner_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Month/Year" />
+                <EditText
+                    android:id="@+id/Monthyear"
+                    android:layout_width="0dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv2"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/pMonthyear"
+                    android:layout_width="0dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv2"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Name Of Shop" />
+                <EditText
+                    android:id="@+id/nameofshopEv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv2"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/pnameofshopEv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv2"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/CropM_source_of_fertilizer" />
+
+                <Spinner
+                    android:id="@+id/sourceOfertilizerSpin"
+                    style="@style/spinner_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Spinner
+                    android:id="@+id/psourceOfertilizerSpin"
+                    style="@style/spinner_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Comments" />
+
+                <EditText
+                    android:id="@+id/commentsTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv2"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/pcommentsTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv2"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="App. Type" />
+
+                <Spinner
+                    android:id="@+id/apptype"
+                    style="@style/spinner_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Spinner
+                    android:id="@+id/papptype"
+                    style="@style/spinner_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:paddingRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            style="@style/header_h1_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:paddingBottom="10dp"
+                            android:text="@string/Fertilizer_Name"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ureaTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv1"
+                            android:text="Urea(GM/Plant)"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        >
+
+
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/tv3"
+                            style="@style/header_h1_text_title"
+                            android:layout_width="172dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingBottom="10dp"
+                            android:text="Current Qtr"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv3"
+
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+android:paddingLeft="5dp"
+                        android:layout_marginTop="10dp"
+                      >
+
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/id4"
+                            style="@style/header_h1_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Prev. Qtr"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"/>
+
+                        <EditText
+
+                            android:id="@+id/lastAppliedDateEdt"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/id4"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/mopTv"
+                            android:layout_width="225dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:text="MOP(GM/Plant)"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                       >
+
+
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt1"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="10dp"
+                       >
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt1"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/sspTv"
+                            android:layout_width="225dp"
+                            android:layout_height="match_parent"
+                            android:text="SSP(GM/Plant)"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                       >
+
+
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt2"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt2"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/mgs04Tv"
+                            android:layout_width="225dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:text="Mgs04(GM/Plant)"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        >
+
+
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt3"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt3"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/boronTv"
+                            android:layout_width="225dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:text="Boron(GM/Plant)"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        >
+
+
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt4"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt4"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/AmmoniumsulphateTv"
+                            android:layout_width="225dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:text="Ammonium Sulphate(GM/Plant)"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                       >
+
+
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt5"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt5"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/dosageGivenTv"
+                            android:layout_width="225dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:text="Neem Cake(GM/Plant)"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                      >
+
+
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt6"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt6"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <Spinner
+                            android:textColor="@color/black"
+                            android:id="@+id/bioFertilizerSpin"
+                            style="@style/spinner_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt7"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt7"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp">
+
+
+                        <Spinner
+                            android:textColor="@color/black"
+                            android:id="@+id/bioFertilizerSpin2"
+                            style="@style/spinner_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/dosageGivenEdt8"
+                            style="@style/editTxt_normal"
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dp">
+
+
+
+                        <EditText
+                            android:id="@+id/lastAppliedDateEdt8"
+                            style="@style/editTxt_normal"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/otherLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Other Product Name *" />
+
+                <EditText
+                    android:id="@+id/otherEdt"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/saveBtn"
+                style="@style/basicBtnStyle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="@string/save" />
+
+            <LinearLayout
+                android:id="@+id/headerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/header_h1_text_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fertilizer Name" />
+
+                    <TextView
+                        style="@style/header_h1_text_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Last applied Date" />
+
+                    <TextView
+                        style="@style/header_h1_text_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dosage , UOM" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary"></View>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fertilizerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

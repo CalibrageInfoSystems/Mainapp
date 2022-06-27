@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/parent">
+
+
+        <TextView
+            android:visibility="gone"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:id="@+id/sapling_Nursery"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sapling Nursery" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/vendorTv"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sprouts Vendors" />
+
+        <TextView
+            android:visibility="gone"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:id="@+id/origin_Sapling"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Orign of Saplings" />
+
+        <TextView
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:id="@+id/crossTv1"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cross" />
+
+
+        <TextView
+            android:id="@+id/varietyNameTxt"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Area Allocated" />
+
+        <TextView
+            android:id="@+id/varietyTypeTxt"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tree Count" />
+
+        <EditText
+            android:id="@+id/plantedSaplingsTxt"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/missingsTressTxt"
+            style="@style/textbasic_titleee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0" />
+
+
+ </LinearLayout>
+
+    <View
+        android:layout_below="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"></View>
+
+
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/pfuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <com.github.pavlospt.CircleView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cv_titleText="0"
+                app:cv_subtitleText=""
+                app:cv_titleSize="25dp"
+                app:cv_subtitleSize="9dp"
+                app:cv_titleColor="@color/white"
+                app:cv_strokeColorValue="@color/green"
+                app:cv_backgroundColorValue="@color/gray"
+                app:cv_fillColor="@color/red"
+                app:cv_fillRadius="0.9"
+                app:cv_strokeWidthSize="5"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:id="@+id/countPlotTxt"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/reg_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/countPlotTxt"
+                android:fontFamily="Roboto_Regular"
+                android:text="@string/Plot_Follow_up"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/arrow_point_to_right" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/visitsRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <com.github.pavlospt.CircleView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cv_titleText="0"
+                app:cv_subtitleText=""
+                app:cv_titleSize="25dp"
+                app:cv_subtitleSize="9dp"
+                app:cv_titleColor="@color/white"
+                app:cv_strokeColorValue="@color/green"
+                app:cv_backgroundColorValue="@color/gray"
+                app:cv_fillColor="@color/red"
+                app:cv_fillRadius="0.9"
+                app:cv_strokeWidthSize="5"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:id="@+id/visitsCountPlotTxt"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/newplot_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/visitsCountPlotTxt"
+                android:fontFamily="Roboto_Regular"
+                android:text="@string/Visits"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/arrow_point_to_right" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/missingTreesRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <com.github.pavlospt.CircleView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cv_titleText="0"
+                app:cv_subtitleText=""
+                app:cv_titleSize="25dp"
+                app:cv_subtitleSize="9dp"
+                app:cv_titleColor="@color/white"
+                app:cv_strokeColorValue="@color/green"
+                app:cv_backgroundColorValue="@color/gray"
+                app:cv_fillColor="@color/red"
+                app:cv_fillRadius="0.9"
+                app:cv_strokeWidthSize="5"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:id="@+id/missingTreesCountPlotTxt"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/missingTreesCountPlotTxt"
+                android:fontFamily="Roboto_Regular"
+                android:text="@string/Missing_trees"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/arrow_point_to_right" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/notVisitedPlots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="Roboto_Regular"
+                android:text="@string/not_visited"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/arrow_point_to_right" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

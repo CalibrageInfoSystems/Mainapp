@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="5dp">
+
+    <TextView
+        android:id="@+id/duplicate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duplicate Farmers"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_alert_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:text="name"
+        android:textSize="25sp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/button_farmer"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="60dp"
+        android:textStyle="bold"
+        android:text="Cancel"
+        style="@style/basicBtnStyle"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textSize="20sp"
+        />
+
+
+
+</LinearLayout>

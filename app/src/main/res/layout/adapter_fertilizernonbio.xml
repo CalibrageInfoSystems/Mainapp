@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/fertilizerappliedll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:weightSum="1">-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:text="Fertilizer Applied"-->
+<!--            android:gravity="center_vertical"/>-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:text=" :  "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fertilizerapplied"-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.4" />-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+
+<!--        android:id="@+id/fertilizermonthyearll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:weightSum="1"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:text="Month/Year"-->
+<!--            android:gravity="center_vertical"/>-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:text=" :  "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fertilizermonthyear"-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.4" />-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+
+<!--        android:id="@+id/nameoftheshopll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:weightSum="1"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:text="Name of the Shop"-->
+<!--            android:gravity="center_vertical"/>-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:text=" :  "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/nameoftheshop"-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.4" />-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+
+<!--        android:id="@+id/sourceoffertilizerll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:weightSum="1"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:text="Source of Fertilizer"-->
+<!--            android:gravity="center_vertical"/>-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:text=" :  "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/sourceoffertilizer"-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.4" />-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+
+<!--        android:id="@+id/fertcommentsll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:weightSum="1"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:text="Comments"-->
+<!--            android:gravity="center_vertical"/>-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:text=" :  "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fertcomments"-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.4" />-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+
+<!--        android:id="@+id/fertapptypell"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:weightSum="1"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:text="App. Type"-->
+<!--            android:gravity="center_vertical"/>-->
+
+<!--        <TextView-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:text=" :  "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fertapptype"-->
+<!--            style="@style/header_h1_text_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_weight="0.4" />-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+
+        android:id="@+id/fertnamell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:weightSum="1"
+        >
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:text="Fertilizer Name"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:text=" :  "/>
+
+        <TextView
+            android:id="@+id/fertname"
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.4" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/fertapplieddatell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:weightSum="1"
+        >
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:text="Last Applied Date"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:text=" :  "/>
+
+        <TextView
+            android:id="@+id/fertapplieddate"
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.4" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/fertdosagell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:weightSum="1"
+        >
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:text="Dosage"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:text=" :  "/>
+
+        <TextView
+            android:id="@+id/fertdosage"
+            style="@style/header_h1_text_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.4" />
+    </LinearLayout>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/green"/>
+
+</LinearLayout>

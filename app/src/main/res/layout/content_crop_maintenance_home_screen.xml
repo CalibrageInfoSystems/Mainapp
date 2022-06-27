@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_crop_maintenance_home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oilpalm3f.mainapp.cropmaintenance.CropMaintenanceHomeScreen"
+    tools:showIn="@layout/activity_crop_maintenance_home_screen">
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/areaExtensionRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/viewSnapShotBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/view_snapshot" />
+
+            <Button
+                android:id="@+id/personalDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/update_farmer_details" />
+
+            <Button
+                android:id="@+id/plotDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/update_plot_details" />
+
+            <Button
+                android:id="@+id/farmerBankBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/Farmer_bank_details" />
+
+            <Button
+                android:id="@+id/farmerIdBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/Farmer_Id_profs"
+                android:visibility="visible"/>
+
+            <Button
+                android:id="@+id/wspBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/update_water_soil_power_details" />
+
+            <Button
+                android:id="@+id/plantationBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/plantation_details_cm" />
+            <Button
+                android:id="@+id/currentPlantation"
+                style="@style/moduleBtnStyle"
+                android:text="@string/currentplantation_details"/>
+            <Button
+                android:id="@+id/interCropDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/interCropDetails" />
+
+            <Button
+                android:id="@+id/fertilizer_detailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/fertilizer_details" />
+
+            <Button
+                android:id="@+id/Recom_fertilizer_detailsBtn"
+                style="@style/moduleBtnStyle"
+                android:visibility="gone"
+                android:text="@string/Recom_fertilizer_details" />
+
+            <Button
+                android:id="@+id/fertilizerBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/fertilizer_details_amp_nutrient_deficiencies" />
+
+            <Button
+                android:id="@+id/pestBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/pest_details" />
+
+            <Button
+                android:id="@+id/diseaseBtn"
+                style="@style/moduleBtnStyle"
+                android:text="Disease Details*" />
+
+            <Button
+                android:id="@+id/weedManagementBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/weed_management_and_other" />
+
+            <Button
+                android:id="@+id/hopBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/health_of_plantation" />
+
+            <Button
+                android:id="@+id/harvestDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/harvest_details" />
+
+            <Button
+                android:id="@+id/complaintsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/complaints"
+                android:visibility="gone"/>
+
+
+            <Button
+                android:id="@+id/referralsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/referrals" />
+
+            <Button
+                android:id="@+id/geoTagsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/Take_Geo_Tag" />
+
+            <Button
+                android:id="@+id/whiteFlyBtn"
+                style="@style/moduleBtnStyle"
+                android:text="WhiteFly" />
+
+            <Button
+                android:id="@+id/yieldBtn"
+                style="@style/moduleBtnStyle"
+                android:text="YieldField" />
+
+            <Button
+                android:id="@+id/finishBtn"
+                style="@style/basicBtnStyle"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="@string/finish" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/check"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="300dp"
+                    app:checkView_strokeColor="@color/green" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

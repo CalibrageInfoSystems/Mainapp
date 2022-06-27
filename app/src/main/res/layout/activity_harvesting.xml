@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".cropmaintenance.HarvestingActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/harvestingTypeLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/harvestingTypeText"
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Harvester Type *" />
+
+            <Spinner
+                android:id="@+id/harvestingtype_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_bg" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/header_h1_text_title_with_background"
+            android:text="Harvester Details" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Select Harvestor *" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.5">
+                    <RadioGroup
+                        android:orientation="horizontal"
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        >
+                        <RadioButton
+                            android:id="@+id/existingharvestor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Existing"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/newharvestor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New"
+                            android:checked="false"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/light_gray"
+                android:padding="6dp">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Search by name or mobile number or farmer code"
+                    android:inputType="textNoSuggestions|textVisiblePassword"
+                    android:padding="6dp"
+                    android:textColor="@color/action_color"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="?android:progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/iv_clear"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:src="@mipmap/close_icon"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/autoselectharvestorLL">
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Search Harvestor *" />
+                <AutoCompleteTextView
+                    style="@style/editTxt_normal"
+                    android:id="@+id/autoCompleteHarvestor"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="Search Harvestor with Code or Number"
+                    android:layout_height="wrap_content">
+                </AutoCompleteTextView>
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_layout"
+            android:orientation="horizontal"
+            android:id="@+id/harvestingcodell">
+
+            <TextView
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Harvester Code *" />
+
+            <EditText
+                android:id="@+id/harvester_code"
+                style="@style/editTxt_normal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:maxLength="30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Harvester Name *" />
+
+            <EditText
+                android:id="@+id/harvester_name"
+                style="@style/editTxt_normal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:maxLength="150" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Mobile Number *" />
+
+            <EditText
+                android:id="@+id/harvestermobileNumber"
+                style="@style/editTxt_normal"
+                android:layout_width="0dp"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_height="50dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Village *" />
+
+            <EditText
+                android:id="@+id/harvestervillage"
+                style="@style/editTxt_normal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:digits="@string/input_type_name"
+                android:maxLength="50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Mandal *" />
+
+            <EditText
+                android:id="@+id/harvestermandal"
+                style="@style/editTxt_normal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:digits="@string/input_type_name"
+                android:maxLength="50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ownpoleavailableLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/ownpoleavailableText"
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Own pole Available *" />
+
+            <Spinner
+                android:id="@+id/ownpoleavailable_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/header_h1_text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Harvesting Price/ton (Rs) *" />
+
+            <EditText
+                android:id="@+id/harvestingPrice"
+                style="@style/editTxt_normal"
+                android:layout_width="0dp"
+                android:inputType="numberDecimal"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:maxLength="10" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/header_h1_text_title_with_background"
+            android:text="Harvesting Details" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Last Harvested Date *" />
+
+                <TextView
+                    android:id="@+id/lastcollectiondate"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Harvesting Date *" />
+
+                <TextView
+                    android:id="@+id/harvestingDate"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Harvesting Date"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Harvesting Interval (Days) *" />
+
+                <EditText
+                    android:id="@+id/harvestingInterval"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next Harvesting Date *" />
+
+                <TextView
+                    android:id="@+id/newharvestingDate"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Today Expected Quantity (Tons) *" />
+
+                <EditText
+                    android:id="@+id/totalexpectedquantity"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ffbsupplyLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/ffbsupplyText"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="FFB Supply to *" />
+
+                <Spinner
+                    android:id="@+id/ffbsupply_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/header_h1_text_title_with_background"
+                android:text="FFB Bunch Quality Details" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Unripen (%) *" />
+
+                <EditText
+                    android:id="@+id/unripen"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Under Ripe (%) *" />
+
+                <EditText
+                    android:id="@+id/underripe"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Ripen (%) *" />
+
+                <EditText
+                    android:id="@+id/ripen"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Over Ripe (%) *" />
+
+                <EditText
+                    android:id="@+id/overipe"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Diseased (%) *" />
+
+                <EditText
+                    android:id="@+id/diseased"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Empty Bunch's (%) *" />
+
+                <EditText
+                    android:id="@+id/emptybunch"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+            <TextView
+                style="@style/header_h1_text_title_with_background"
+                android:text="FFB Stalk Quality Details" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Long (%) *" />
+
+                <EditText
+                    android:id="@+id/longstake"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Medium (%) *" />
+
+                <EditText
+                    android:id="@+id/mediumstake"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Short (%) *" />
+
+                <EditText
+                    android:id="@+id/shortstake"
+                    style="@style/editTxt_normal"
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Optimum (%) *" />
+
+                <EditText
+                    android:id="@+id/optimum"
+                    style="@style/editTxt_normal"
+                    android:inputType="number"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="3" />
+            </LinearLayout>
+            <TextView
+                style="@style/header_h1_text_title_with_background"
+                android:text="Questions" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:id="@+id/isloosefruitavailableLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/isloosefruitavailableText"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Is Loose Fruit Available? *" />
+
+                <Spinner
+                    android:id="@+id/isloosefruitavailable_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loosefruitweightLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_layout"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Loose Fruit Weight (Kg) *" />
+
+                <EditText
+                    android:id="@+id/loosefruitweight"
+                    style="@style/editTxt_normal"
+                    android:inputType="number"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:maxLength="10" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/farmeravailableinFieldLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/farmeravailableinFieldText"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Farmer Available In Field *" />
+
+                <Spinner
+                    android:id="@+id/farmeravailableinField_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/detailsinformedtoFarmerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/detailsinformedtoFarmerText"
+                    style="@style/header_h1_text_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Details informed to Farmer *" />
+
+                <Spinner
+                    android:id="@+id/detailsinformedtoFarmer_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/harvestingsubmit"
+                    style="@style/basicBtnStyle"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/submit_btn" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

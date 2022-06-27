@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_registration_flow_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oilpalm3f.mainapp.areaextension.RegistrationFlowScreen"
+    tools:showIn="@layout/activity_registration_flow_screen">
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/areaExtensionRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/personalDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/personal_details"/>
+            <Button
+                android:id="@+id/idProofBtn"
+                style="@style/moduleBtnStyle"
+                android:text="Identification Details" />
+
+            <Button
+                android:id="@+id/bankDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="Bank Details" />
+
+            <Button
+                android:id="@+id/plotDetailsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/plot_details" />
+
+            <Button
+                android:id="@+id/wspBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/water_soil_power_details" />
+
+            <Button
+                android:id="@+id/plotGeoTagBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/plot_geo_tag" />
+
+            <Button
+                android:id="@+id/cpBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/conversion_potential_and_notes" />
+
+            <Button
+                android:id="@+id/referalsBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/referrals" />
+
+
+            <Button
+                android:id="@+id/marketSurveyBtn"
+                style="@style/moduleBtnStyle"
+                android:text="@string/market_survey" />
+
+
+            <Button
+                android:id="@+id/finishBtn"
+                style="@style/basicBtnStyle"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="@string/finish" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,395 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="false"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="com.oilpalm3f.mainapp.cropmaintenance.YieldFragment">
+    <include
+        android:id="@+id/toolbarlayout"
+        layout="@layout/toolbar_common">
+
+    </include>
+
+    <Button
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/yieldlastvisitdataBtn"
+        style="@style/dialogBasicBtnStyle"
+        android:text="@string/last_visit_data"
+        android:padding="4dp"
+        android:layout_gravity="end"/>
+
+    <LinearLayout
+        android:id="@+id/rl1"
+        android:padding="10dp"
+        android:layout_below="@+id/toolbarlayout"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/question1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is the reason for Low Yield?"
+            android:gravity="left"/>
+        <Spinner
+            android:id="@+id/spinner_parent"
+            android:layout_below="@+id/question1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/supplyingOutSide">
+        <RelativeLayout
+            android:id="@+id/explaincompanyserviceLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/explainoilpalm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingHorizontal="10dp"
+                android:text="Explain About Oil Palm Act"
+                android:textColor="@color/colorGray" />
+
+            <CheckBox
+                android:layout_below="@+id/explainoilpalm"
+                android:id="@+id/explaincompanyservice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="Explain about Company services"
+                android:textColor="@color/colorGray" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lL1"
+            android:layout_width="394dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explaincompanyserviceLl"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/supplyingOutsideTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Reason for supplying outside " />
+
+            <Spinner
+                android:id="@+id/spinner_supply_outside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/supplyingOutsideTv" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/higherLayout"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/offHighRateTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Who is offering Higher Rate (Input name of agent or point of contact)"
+                />
+            <EditText
+                android:id="@+id/offHighRateEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:inputType="text"
+                />
+            <TextView
+                android:id="@+id/factoryRepresentTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Which factory do they represent (Input name of Factory)"
+                />
+            <EditText
+                android:id="@+id/factoryRepresentEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:inputType="text"
+                />
+            <TextView
+                android:id="@+id/howmuchTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How much are they offering?"
+                />
+            <EditText
+                android:id="@+id/howmuchEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:inputType="number"
+                />
+            <TextView
+                android:id="@+id/mopaymentTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What mode of payment are they offering"
+                />
+            <Spinner
+                android:id="@+id/paymentSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Would you be willing to forego all company services as a cost for this?"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radiogup">
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:id="@+id/yId"/>
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                       android:id="@+id/nId" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/logisticsLayout"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/issueName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is the issue?"
+                    />
+                <EditText
+                    android:id="@+id/issueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/offHighRateEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="If 3FOP resolves this issue will you supply to 3FOP?"
+                        android:id="@+id/ofRadQues"/>
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/opGroup">
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:id="@+id/opy"
+                            />
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:id="@+id/opn"
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/othersLayout"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/detailedreasonTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Input detailed reason for offering outside"
+                    />
+                <EditText
+                    android:id="@+id/DetailedReasonEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/sellingOutside">
+<!--        <TextView-->
+<!--            android:id="@+id/fbbTv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Whose name are you selling FFB under" />-->
+<!--        <com.toptoche.searchablespinnerlibrary.SearchableSpinner-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/fbbEt"-->
+<!--            android:layout_below="@+id/offHighRateTv"/>-->
+        <TextView
+            android:id="@+id/EfbbTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Whose name are you selling FFB under" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EfbbEt"
+            android:clickable="true"
+            android:editable="false"
+            android:layout_below="@+id/offHighRateTv"/>
+
+
+        <TextView
+            android:id="@+id/monthTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How long (Months) will you continue to sell under this name"/>
+        <EditText
+            android:id="@+id/monthEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can company attach both of you to same family grouping until further notice?"
+                android:id="@+id/cpQuestion"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cpRadio">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cpy"
+                    android:text="Yes"
+                    />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/cpn"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/otherIssuesLayout"
+        android:visibility="gone">
+
+            <TextView
+                android:id="@+id/reasonTv"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is the reason"/>
+
+            <Spinner
+                android:id="@+id/spinner_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/commentsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comment"/>
+            <EditText
+                android:id="@+id/commentsEt"
+                android:layout_below="@+id/commentsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:inputType="textMultiLine"
+                android:minLines="3"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        style="@style/basicBtnStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/save" />
+
+
+</LinearLayout>

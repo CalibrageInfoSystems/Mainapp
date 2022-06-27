@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include layout="@layout/toolbar_common"/>
+
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lattitudeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textIsSelectable="true"
+
+                style="@style/textbasic_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/lattitude" />
+
+            <TextView
+                style="@style/textbasic_title"
+                android:textIsSelectable="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/lattitudeTxt"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logitudeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/lattitudeLayout"
+            android:padding="5dp">
+
+            <TextView
+                style="@style/textbasic_title"
+                android:textIsSelectable="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/longitude" />
+
+            <TextView
+                style="@style/textbasic_title"
+                android:textIsSelectable="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/longitudeTxt"
+                android:layout_marginLeft="10dp"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/logitudeLayout"
+            android:padding="5dp">
+
+            <TextView
+                style="@style/textbasic_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address_tag" />
+
+            <TextView
+                style="@style/textbasic_title"
+                android:textIsSelectable="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/addressTxt"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="15dp"
+                android:text="" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:visibility="gone" />
+
+
+
+        <TextView
+            android:id="@+id/titleHeader"
+            style="@style/textbasic_title_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/geotag"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/please_make_sure_you_are_standing_in_the_middle_of_the_plot_once_you_are_please_press_the_create_geotag_button"
+            android:textColor="@color/black"
+            android:textIsSelectable="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/geo_tag"
+            android:id="@+id/geotag"/>
+
+        <Button
+            android:id="@+id/createGeoTagBtn"
+            style="@style/basicBtnStyle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="@string/create_geo_tag"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/geotag"/>
+
+        <Button
+            android:id="@+id/retakeGeoTagBtn"
+            style="@style/basicBtnStyle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="@string/retake_geotag"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_below="@+id/createGeoTagBtn"/>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,75 @@
+ Main Appv_1.3.18 Release Note
+
+1. GPS bounded plot issue resolved .
+2. image issue follow-up is solved .
+3. app crashing for the plots in the prospective stage is sorted.
+4-  FA_Log integration.
+
+5-  KRAS integration  (Disable).
+
+6-  Conversion potential logic .(It will get 10 on selection YES by default)
+
+7-  Add Google Map for Current Location to Farmer field Location.
+
+8- Sapling count of  issue are resolved.
+
+9- Capture Image on conversion module if Image did not take on adding new  farmer.
+  
+10- nutrient deficiency chemicals list should show fertilizer master list
+�        
+11- colour issue - if harvest details are already filled the section should be grey
+�         colour issue - when intercrop details are filled, colour of section is not updating to grey
+
+12-  bug: plantation details on tab during crop maintenance visit only showing 1 variety planted, not all varieties planted
+
+13-Transection Sync issue after reset data.
+
+14- Plot split functionality added.
+
+15-  Alerts 
+
+16 - Notification icon  and Sync option add at the top right corner of dashboard.
+
+17-  New columns in plot and farmer tables as part of plot split and partial uprootment                 
+enhancements.
+
+18-Issues mention in Google Sheet by Divya is Done.
+19- Gps Issue is also fixed in conversion time for 230 plots, for this plots we include in conversion time Re-Take GeoTag
+
+Dueto some reasons we released 1.3.19=========================
+
+Falog Tracking issue is fixed in Version 3.1.20 and Kras also and Showstopper in MarketSurvey is also resolved.==========
+
+====================NEW Requriment we released 1.3.23&dbV:7=================================
+
+Fertilizer Recommendation screen
+we add chemical Recommendation in Pest, nutrient and Disease screens
+Add the columns in Pest, nutrient and Disease and Harvest.
+Add Master table for BenchMark
+Add two Fields in Harvest Screen
+logic for ExpectedYield in FFB-Harvest Details screen.
+
+=========3FMainApp V1.3.24===================================
+
+Due to GPS Logic in  PlotSplit(ReTake GeoBoundaries) module, this is disabled.
+
+=========3FMainApp V1.3.25===================================
+
+Due to Duplicate plots for Conversion plantation image
+ Due to Duplicate plot status for FarmerHistory.
+ Data missing in plot table for GPs area and Total palm area and DOP.
+ =========3FMainApp V1.3.26===================================
+
+ Two Tables are added(AdvanceSapplingDetails and NurserySapplingDetails)
+ In Conversion Module AdvanceSapplingDetails == sum(NurserySapplingDetails).
+                 |
+                 |
+                 |
+  =========3FMainApp V1.3.48===================================
+  We need to show the IsActive Plot when we click on Particular Farmer.
+  =========3FMainApp V1.3.49===================================
+  Photo in bank details screen and ID proof screen
+  Gap Filling in Current Plantation Screen for CropMaintenance
+  Add field in Conversion potential score
+  duplicate farmers (Data replaced )issue.
+  Allow Special characters and alphabets for Account Number.
